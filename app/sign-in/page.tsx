@@ -1,11 +1,14 @@
-import { auth } from '@/auth'
+import { useUser } from '@auth0/nextjs-auth0/client';
 import { LoginButton } from '@/components/login-button'
 import { redirect } from 'next/navigation'
 
 export default async function SignInPage() {
-  const session = await auth()
+  const { user, error, isLoading } = useUser();
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
   // redirect to home if user is already logged in
-  if (session?.user) {
+  if (user) {
     redirect('/')
   }
   return (
