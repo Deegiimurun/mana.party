@@ -52,7 +52,7 @@ export function UserMenu({ user }: UserMenuProps) {
           <DropdownMenuItem
             onClick={() =>
               signOut({
-                callbackUrl: '/api/auth/logout'
+                callbackUrl: 'https://auth.mana.party/v2/logout'
               })
             }
             className="text-xs"
