@@ -11,10 +11,10 @@ import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: {
-    default: 'MANA Brain AI Chatbot',
-    template: `%s - MANA Brain AI Chatbot`
+    default: 'MANA Brain: AI-powered Creative Tools',
+    template: `%s - MANA Brain: AI-powered Creative Tools`
   },
-  description: 'MANA Brain: An AI-powered music chatbot.',
+  description: 'MANA Brain: AI-powered Creative Tools',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
