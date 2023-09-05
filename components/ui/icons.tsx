@@ -104,7 +104,7 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
   )
 }
 
-function IconVercel({ className, ...props }: React.ComponentProps<'svg'>) {
+function IconMANA({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
     <svg
       aria-label="Vercel logomark"
