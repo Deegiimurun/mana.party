@@ -15,7 +15,11 @@ export const {
   auth,
   CSRF_experimental // will be removed in future
 } = NextAuth({
-  providers: [Auth0],
+  providers: [Auth0({
+      clientId: process.env.AUTH0_ID,
+      clientSecret: process.env.AUTH0_SECRET,
+      issuer: process.env.AUTH0_ISSUER,
+    }),],
   callbacks: {
     jwt({ token, profile }) {
       if (profile) {
