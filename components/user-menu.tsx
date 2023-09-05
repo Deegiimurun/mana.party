@@ -49,10 +49,19 @@ export function UserMenu({ user }: UserMenuProps) {
             <div className="text-xs text-zinc-500">{user?.email}</div>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
+          <DropdownMenuItem asChild>
+            <a
+              href="https://auth.mana.party/oidc/logout"
+              className="inline-flex items-center justify-between w-full text-xs"
+            >
+              Log Out
+              <IconExternalLink className="w-3 h-3 ml-auto" />
+            </a>
+          </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() =>
               signOut({
-                callbackUrl: 'https://auth.mana.party/oidc/logout'
+                callbackUrl: '/'
               })
             }
             className="text-xs"
