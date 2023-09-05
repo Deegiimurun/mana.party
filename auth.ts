@@ -24,7 +24,7 @@ export const {
     jwt({ token, profile }) {
       if (profile) {
         token.id = profile.id
-        token.image = profile.avatar_url || profile.picture || profile.image
+        token.image = profile.avatar_url || profile.picture
       }
       return token
     },
