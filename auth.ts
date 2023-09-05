@@ -1,5 +1,5 @@
 import NextAuth, { type DefaultSession } from 'next-auth'
-import GitHub from 'next-auth/providers/github'
+import Auth0 from 'next-auth/providers/auth0'
 
 declare module 'next-auth' {
   interface Session {
@@ -15,7 +15,7 @@ export const {
   auth,
   CSRF_experimental // will be removed in future
 } = NextAuth({
-  providers: [GitHub],
+  providers: [Auth0],
   callbacks: {
     jwt({ token, profile }) {
       if (profile) {
