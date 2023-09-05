@@ -51,7 +51,7 @@ export function UserMenu({ user }: UserMenuProps) {
           <DropdownMenuSeparator />
           <DropdownMenuItem asChild>
             <a
-              href="https://auth.mana.party/oidc/logout"
+              href="/api/auth/federated-logout"
               className="inline-flex items-center justify-between w-full text-xs"
             >
               Log Out
