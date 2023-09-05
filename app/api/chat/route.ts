@@ -14,6 +14,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration)
 
 export async function POST(req: Request) {
+  const authResult = await auth();
+  console.log("Auth result:", authResult);
   const json = await req.json()
   const { messages, previewToken } = json
   const userId = (await auth())?.user.id
