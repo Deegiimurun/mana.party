@@ -4,7 +4,7 @@ import { getToken } from "next-auth/jwt"
 
 export default async function federatedLogout(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const token = await getToken({req, secret: process.env.SECRET, encryption: true })
+    const token = await getToken({req, secret: process.env.SECRET })
     if (!token) {
       if (process.env.NEXTAUTH_URL) {
         return res.redirect(process.env.NEXTAUTH_URL)
