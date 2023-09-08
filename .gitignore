@@ -28,11 +28,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# turbo
-.turbo
-
-.contentlayer
 .env
-.vercel
-.vscode
+/test-results/
+/playwright-report/
+/playwright/.cache/
